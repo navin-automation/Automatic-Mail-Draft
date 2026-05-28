@@ -1,8 +1,8 @@
 Attribute VB_Name = "WORKING_ON_DRAFT"
 Option Explicit
 
-Public Const DOWNLOAD_FOLDER As String = "C:\Users\User\Downloads\"
-Public Const FROM_ADDRESS As String = "support@techroversolutions.com"
+Public Const DOWNLOAD_FOLDER As String = "C:\Users\<DOWNLOAD_FOLDER_PATH>"
+Public Const FROM_ADDRESS As String = "Sender-email@example.com"
 
 ' ---------------- EXCHANGE DRAFTS ----------------
 Function GetExchangeDraftsFolder() As Object
@@ -200,9 +200,9 @@ Sub CreatePMEmail(hotel As String, pm1 As String, pm2 As String, cc As String, _
         IIf(mtd <> "", "<li>MTD Labor Report</li>", "") & _
         "</ul><br>" & _
         "Thank you,<br><br>" & _
-        "<a href='https://www.techrover.us/' target='_blank'>" & _
+        "<a href='https://www.example.com/' target='_blank'>" & _
         "<img src='https://i.ibb.co/v4f3SQBM/logooo.png' height='40'><br></a>" & _
-        "Support Team<br>Techrover Solutions<br>support@techroversolutions.com<br>"
+        "Support Team<br>Your Company Name<br>support@example.com<br>"
     
     SafeAttach mail, daily
     SafeAttach mail, mtd
@@ -232,9 +232,9 @@ Sub CreateGMEmail(hotel As String, gmList As String, cc As String, greeting As S
         IIf(revenue <> "", "<li>Revenue Report</li>", "") & _
         "</ul><br>" & _
         "Thank you,<br><br>" & _
-        "<a href='https://www.techrover.us/' target='_blank'>" & _
+        "<a href='https://www.example.com/' target='_blank'>" & _
         "<img src='https://i.ibb.co/v4f3SQBM/logooo.png' height='40'><br></a>" & _
-        "Support Team<br>Techrover Solutions<br>support@techroversolutions.com<br>"
+        "Support Team<br>Your Company Name<br>support@example.com<br>"
     
     SafeAttach mail, daily
     SafeAttach mail, mtd
